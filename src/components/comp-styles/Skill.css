@@ -1,0 +1,7 @@
+.sm-container {
+    display: flex;
+}
+
+.info-skill {
+    border-left: 1px solid black;
+}
