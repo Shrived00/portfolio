@@ -1,0 +1,72 @@
+.header {
+    background-image: url('https://jcoelho93.netlify.app/images/cover10.JPG');
+
+    color: white;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+}
+
+.name {
+    font-size: larger;
+    text-transform: uppercase;
+}
+
+
+
+
+
+.list {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.list-item {
+    padding: 1rem;
+
+}
+
+.logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+
+}
+
+.logo-style {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+
+
+}
+
+.text-one {
+    font-size: 1.5rem;
+}
+
+.text-two {
+    font-size: 2rem;
+    font-weight: 600;
+
+}
+
+.text-three {
+    font-size: 1.5rem;
+
+}

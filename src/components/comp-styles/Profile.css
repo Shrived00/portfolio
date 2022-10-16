@@ -1,0 +1,44 @@
+.main {
+    background-color: #3273dc;
+}
+
+.image {
+    text-align: center;
+
+}
+
+.img-sty {
+    border-radius: 2rem;
+}
+
+.introone {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.introtwo {
+    text-align: center;
+}
+
+
+
+
+.interest-main {
+    display: flex;
+    width: 100%;
+
+
+}
+
+.interest-container {
+    display: flex;
+    width: fit-content;
+    margin: auto;
+}
+
+.interest {
+    display: flex;
+    margin: 1rem;
+    width: fit-content;
+}
