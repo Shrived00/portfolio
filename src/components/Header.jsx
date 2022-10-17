@@ -23,14 +23,14 @@ function Header() {
         <div className='header'>
             <div className='navbar'>
                 <div className='name'>{portfolio.name}</div>
-                <div className='list'>
+                {/* <div className='list'>
                     <div className='list-item'>About Me</div>
                     <div className='list-item'>Skills</div>
                     <div className='list-item'>Certification</div>
                     <div className='list-item'>Experience</div>
                     <div className='list-item'>Articles</div>
 
-                </div>
+                </div> */}
             </div>
             <div className='info'>
                 <div className='text-one'>I,m a</div>
