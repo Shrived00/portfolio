@@ -42,3 +42,7 @@
     margin: 1rem;
     width: fit-content;
 }
+
+.image{
+    border-radius: 54%;
+}
