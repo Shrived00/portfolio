@@ -1,3 +1,4 @@
+
 .header {
     background-image: url('../../images/cover.jpg');
     background-repeat: no-repeat;
@@ -8,33 +9,31 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 2rem;
 }
 
-.navbar {
-    display: flex;
-    flex-direction: row;
+
+
+.profile{
+    position: absolute;
+    top: 1%;
+    padding: 5%;
 }
+.image{
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+.navbar{
+    padding-top: -2%;
+}
+
 
 .name {
-    font-size: larger;
-    text-transform: uppercase;
-}
-
-
-
-
-
-.list {
-    display: flex;
-    flex-direction: row;
-
-}
-
-.list-item {
-    padding: 1rem;
-
+    position: absolute;
+    font-size:x-large;
+    font-weight: 600;
+    padding: 5%;
+    margin-top: 40%;
 }
 
 .logos {
@@ -45,30 +44,41 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-
-
 }
 
-.logo-style {
-    display: flex;
-    width: 100%;
-    text-align: center;
-    align-items: center;
-
-
-}
 
 .text-one {
     font-size: 1.5rem;
+    padding: 0 2rem;
+    padding-top: 2rem;
 }
 
 .text-two {
     font-size: 2rem;
     font-weight: 600;
-
+    padding: 0 2rem;
 }
 
 .text-three {
     font-size: 1.5rem;
-
+    padding: 0 2rem;
 }
+
+.icons{
+    position:absolute;
+    right: 10%;
+    top: 20%;
+}
+
+.icon{
+    padding: 0.5rem;
+}
+
+.contact{
+    position:absolute;
+    right: 10%;
+    top:10%;
+    
+}
+
+
