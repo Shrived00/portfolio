@@ -1,9 +1,12 @@
 import React, { useEffect, useState} from 'react'
-import GitHub from '@mui/icons-material/GitHub';
-import { Code, LinkedIn } from '@mui/icons-material';
 import './comp-styles/Header.css'
 import { getPortfolio } from '../store/port';
 import { useDispatch , useSelector} from 'react-redux';
+import pic from '../images/two.jpg'
+import profile from '../images/profile.png'
+import * as Unicons from '@iconscout/react-unicons';
+import axios from 'axios'
+import { Button } from 'react-bootstrap';
 
 
 function Header() {
@@ -17,33 +20,64 @@ function Header() {
 
     
 
+    
+
   
     
     return (
         <div className='header'>
-            <div className='navbar'>
+                    <img src={profile} className='profile'  height={150} width={150} />
+                    <img src={pic} className='image' height={300} width="100%" ></img>
+                    <Button href='https://buisnesscardserver2.herokuapp.com/api/v1/portfolio/contact/634423ee353695c9ae81478b' className='contact'>Add Contact</Button>
                 <div className='name'>{portfolio.name}</div>
-                {/* <div className='list'>
-                    <div className='list-item'>About Me</div>
-                    <div className='list-item'>Skills</div>
-                    <div className='list-item'>Certification</div>
-                    <div className='list-item'>Experience</div>
-                    <div className='list-item'>Articles</div>
+                <div className='icons'>
+                    <span className='icon'><Unicons.UilLinkedin  /></span>
+                    <span className='icon'><Unicons.UilGithub /></span>
+                    <span className='icon'><Unicons.UilFacebook /></span>
+                </div>
+                <div className='info' >
+                    <div className='text-one'>I,m a</div>
+                    <div className='text-two'>{portfolio.occupation}</div>
+                    <div className='text-three'>{portfolio.address}</div>
+                </div>
+                {portfolio && <div className='main my-5 p-5 text-white'>
+                
+
+                <div className='introone my-3'>About Me</div>
+                <div className='introtwo px-0'>{portfolio.description}</div>
+
+
+
+
+                {/* <div className='interest-main text-center'>
+                
+                    <div className='interest-container text-center'>
+                        <Container>
+                            <Row>
+                                
+                                {portfolio.interests && portfolio.interests.map((item)=>{
+                                    return(
+                                        <Col> <div className='interest border border-2 text-center rounded p-2'>
+                                    <span>{item.interest}</span>
+                                    <span className='ms-2 inter-logo'><AlbumIcon /></span>
+                                    </div></Col>
+                                    )
+                                })}
+                                
+                                
+                            </Row>
+                        </Container>
+
+                    </div>
 
                 </div> */}
-            </div>
-            <div className='info'>
-                <div className='text-one'>I,m a</div>
-                <div className='text-two'>{portfolio.occupation}</div>
-                <div className='text-three'>{portfolio.address}</div>
-            </div>
-            <div className='logos'>
-                <div className='logo-style ' ><GitHub /></div>
-                <div className='logo-style' ><Code /></div>
-                <div className='logo-style' ><LinkedIn /></div>
-            </div>
 
+
+
+
+            </div> }
         </div>
+        
     )
 }
 
