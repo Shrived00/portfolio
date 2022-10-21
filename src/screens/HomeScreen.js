@@ -23,13 +23,7 @@ function HomeScreen() {
 
   return (
     <>
-      <Header />
-      {/* <Profile /> */}
-      {/* <Skill />
-      <Certification />
-      <Education />
-      <Experience />
-      <Footer /> */}
+      {/* <Header /> */}
     </>
 
   );

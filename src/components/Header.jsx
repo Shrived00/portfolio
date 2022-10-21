@@ -7,15 +7,16 @@ import profile from '../images/profile.png'
 import * as Unicons from '@iconscout/react-unicons';
 import axios from 'axios'
 import { Button } from 'react-bootstrap';
+import { useParams } from 'react-router-dom';
 
 
 function Header() {
+    const {id} = useParams();
     const dispatch = useDispatch();
 
     const { portfolio, loading } = useSelector(state => state.port);
-
     useEffect(() => {
-        dispatch(getPortfolio());
+        dispatch(getPortfolio(id));
     }, [dispatch]);
 
     
@@ -26,14 +27,18 @@ function Header() {
     
     return (
         <div className='header'>
-                    <img src={profile} className='profile'  height={150} width={150} />
-                    <img src={pic} className='image' height={300} width="100%" ></img>
-                    <Button href='https://buisnesscardserver2.herokuapp.com/api/v1/portfolio/contact/634423ee353695c9ae81478b' className='contact'>Add Contact</Button>
+                    {portfolio.image ? <img src={portfolio.image} className='profile'  height={150} width={150} /> :<img src={profile} className='profile'  height={150} width={150} />}
+                    <img src={pic} className='image' height={1500} width="100%" ></img>
+                    <Button href={`https://buisnesscardserver2.herokuapp.com/api/v1/portfolio/contact/${id}`} className='contact'>Add Contact</Button>
                 <div className='name'>{portfolio.name}</div>
-                <div className='icons'>
-                    <span className='icon'><Unicons.UilLinkedin  /></span>
-                    <span className='icon'><Unicons.UilGithub /></span>
-                    <span className='icon'><Unicons.UilFacebook /></span>
+                <div className='icons1'>
+                    {portfolio.linkedInUrl !== "" && <a className='icon' href={portfolio.linkedInUrl}><Unicons.UilLinkedin  /></a>}
+                    {portfolio.twitterUrl !== "" && <a className='icon' href={portfolio.twitterUrl}><Unicons.UilTwitter /></a>}
+                    {portfolio.facebookUrl !== "" && <a className='icon' href={portfolio.facebookUrl}><Unicons.UilFacebook /></a>}
+                </div>
+                <div className='icons2'>
+                    {portfolio.instagramUrl !== "" && <a className='icon' href={portfolio.instagramUrl}><Unicons.UilInstagram  /></a>}
+                    {portfolio.whatsappUrl !== "" && <a className='icon' href={portfolio.whatsappUrl}><Unicons.UilWhatsapp /></a>}
                 </div>
                 <div className='info' >
                     <div className='text-one'>I,m a</div>

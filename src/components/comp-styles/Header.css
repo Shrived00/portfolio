@@ -17,6 +17,8 @@
     position: absolute;
     top: 1%;
     padding: 5%;
+    border: solid 2px white;
+    border-radius: 100%;
 }
 .image{
     border-bottom-left-radius: 10%;
@@ -64,14 +66,20 @@
     padding: 0 2rem;
 }
 
-.icons{
+.icons1{
     position:absolute;
     right: 10%;
     top: 20%;
 }
+.icons2{
+    position:absolute;
+    right: 20%;
+    top: 25%;
+}
 
 .icon{
     padding: 0.5rem;
+    color: white;
 }
 
 .contact{

@@ -19,9 +19,9 @@ export default portfolioSlice.reducer
 
 const {portfolioSuccess} = portfolioSlice.actions
 
-export const getPortfolio = () => async (dispatch) =>{
+export const getPortfolio = (id) => async (dispatch) =>{
     try{
-        await axios.get('/api/v1/portfolio/634423ee353695c9ae81478b')
+        await axios.get(`/api/v1/portfolio/${id}`)
             .then((response)=> dispatch(portfolioSuccess(response.data)))
     }
     catch(e){
